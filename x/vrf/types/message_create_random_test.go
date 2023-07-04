@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AyrisDev/VinceFinance/testutil/sample"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil/sample"
 	"github.com/stretchr/testify/require"
 )
 

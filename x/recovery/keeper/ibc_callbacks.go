@@ -14,9 +14,9 @@ import (
 	host "github.com/cosmos/ibc-go/v3/modules/core/24-host"
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"
 
-	"github.com/AyrisDev/VinceFinance/ibc"
-	vince "github.com/AyrisDev/VinceFinance/types"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/ibc"
+	vince "github.com/AyrisDev/vinceChain_Blockchain/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 // OnRecvPacket performs an IBC receive callback. It returns the tokens that

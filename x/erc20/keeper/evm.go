@@ -13,8 +13,8 @@ import (
 	"github.com/tharsis/ethermint/server/config"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/AyrisDev/VinceFinance/contracts"
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/contracts"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // QueryERC20 returns the data of a deployed ERC20 contract

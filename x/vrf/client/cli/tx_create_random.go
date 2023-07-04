@@ -8,7 +8,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/tx"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 )
 
 var _ = strconv.Itoa(0)

@@ -21,7 +21,7 @@ import (
 	"github.com/cosmos/ibc-go/v3/testing/simapp"
 
 	ethermint "github.com/tharsis/ethermint/types"
-	vinceapp "github.com/AyrisDev/VinceFinance/app"
+	vinceapp "github.com/AyrisDev/vinceChain_Blockchain/app"
 )
 
 var DefaultTestingAppInit func() (ibcgotesting.TestingApp, map[string]json.RawMessage) = vinceapp.SetupTestingApp

@@ -18,9 +18,9 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/AyrisDev/VinceFinance/x/erc20/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/erc20/keeper"
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // type check to ensure the interface is properly implemented

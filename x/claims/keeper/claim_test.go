@@ -14,10 +14,10 @@ import (
 	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
 	"github.com/tharsis/ethermint/tests"
 	ethermint "github.com/tharsis/ethermint/types"
-	"github.com/AyrisDev/VinceFinance/testutil"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 func (suite *KeeperTestSuite) SetupClaimTest() {

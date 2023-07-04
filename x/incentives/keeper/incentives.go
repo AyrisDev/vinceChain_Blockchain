@@ -5,7 +5,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 
-	"github.com/AyrisDev/VinceFinance/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
 )
 
 // GetAllIncentives - get all registered Incentives

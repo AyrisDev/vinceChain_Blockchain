@@ -6,7 +6,7 @@ import (
 	"github.com/coniks-sys/coniks-go/crypto/vrf"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 	"strconv"
 )
 

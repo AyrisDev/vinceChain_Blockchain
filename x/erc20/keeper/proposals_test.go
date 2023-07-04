@@ -10,8 +10,8 @@ import (
 
 	"github.com/tharsis/ethermint/tests"
 
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 const (

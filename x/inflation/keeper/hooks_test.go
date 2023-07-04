@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 func (suite *KeeperTestSuite) TestEpochIdentifierAfterEpochEnd() {

@@ -7,7 +7,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // This is an evil token. Whenever an A -> B transfer is called,

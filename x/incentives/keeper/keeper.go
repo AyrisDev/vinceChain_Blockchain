@@ -8,7 +8,7 @@ import (
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/AyrisDev/VinceFinance/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
 )
 
 // Keeper of this module maintains collections of incentives.

@@ -2,8 +2,8 @@ package inflation
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AyrisDev/VinceFinance/x/inflation/keeper"
-	"github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 // InitGenesis import module genesis

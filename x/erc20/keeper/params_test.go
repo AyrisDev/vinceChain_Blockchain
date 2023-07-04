@@ -1,6 +1,6 @@
 package keeper_test
 
-import "github.com/AyrisDev/VinceFinance/x/erc20/types"
+import "github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 
 func (suite *KeeperTestSuite) TestParams() {
 	params := suite.app.Erc20Keeper.GetParams(suite.ctx)

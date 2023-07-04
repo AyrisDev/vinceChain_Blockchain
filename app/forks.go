@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	v2 "github.com/AyrisDev/VinceFinance/app/upgrades/v2"
+	v2 "github.com/AyrisDev/vinceChain_Blockchain/app/upgrades/v2"
 )
 
 // BeginBlockForks executes any necessary fork logic based upon the current block height.

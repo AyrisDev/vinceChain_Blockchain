@@ -39,9 +39,9 @@ import (
 	servercfg "github.com/tharsis/ethermint/server/config"
 	srvflags "github.com/tharsis/ethermint/server/flags"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	cmdcfg "github.com/AyrisDev/VinceFinance/cmd/config"
-	vincekr "github.com/AyrisDev/VinceFinance/crypto/keyring"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	cmdcfg "github.com/AyrisDev/vinceChain_Blockchain/cmd/config"
+	vincekr "github.com/AyrisDev/vinceChain_Blockchain/crypto/keyring"
 )
 
 const (

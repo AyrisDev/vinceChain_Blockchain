@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AyrisDev/VinceFinance.git"
+    "url": "git+https://github.com/AyrisDev/vinceChain_Blockchain.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AyrisDev/VinceFinance/issues"
+    "url": "https://github.com/AyrisDev/vinceChain_Blockchain/issues"
   },
-  "homepage": "https://github.com/AyrisDev/VinceFinance#readme"
+  "homepage": "https://github.com/AyrisDev/vinceChain_Blockchain#readme"
 }

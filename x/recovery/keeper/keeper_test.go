@@ -17,9 +17,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	claimstypes "github.com/AyrisDev/VinceFinance/x/claims/types"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	claimstypes "github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 var (

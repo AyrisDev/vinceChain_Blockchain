@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	v2 "github.com/AyrisDev/VinceFinance/x/claims/migrations/v2"
+	v2 "github.com/AyrisDev/vinceChain_Blockchain/x/claims/migrations/v2"
 )
 
 var _ module.MigrationHandler = Migrator{}.Migrate1to2

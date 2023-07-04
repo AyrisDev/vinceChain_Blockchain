@@ -6,8 +6,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/AyrisDev/VinceFinance/x/claims/keeper"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 // NewHandler returns claim module messages

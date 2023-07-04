@@ -15,8 +15,8 @@ import (
 
 	"github.com/tharsis/ethermint/server/config"
 
-	"github.com/AyrisDev/VinceFinance/testutil/network"
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil/network"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // var _ = Describe("E2e", func() {

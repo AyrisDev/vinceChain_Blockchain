@@ -7,9 +7,9 @@ import (
 	channeltypes "github.com/cosmos/ibc-go/v3/modules/core/04-channel/types"
 	"github.com/cosmos/ibc-go/v3/modules/core/exported"
 
-	"github.com/AyrisDev/VinceFinance/ibc"
-	vince "github.com/AyrisDev/VinceFinance/types"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/ibc"
+	vince "github.com/AyrisDev/vinceChain_Blockchain/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 // OnAcknowledgementPacket performs an IBC send callback. Once a user submits an

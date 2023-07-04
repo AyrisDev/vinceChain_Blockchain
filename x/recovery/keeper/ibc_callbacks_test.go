@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/tharsis/ethermint/crypto/ethsecp256k1"
 	"github.com/tharsis/ethermint/tests"
-	"github.com/AyrisDev/VinceFinance/testutil"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
 
 	transfertypes "github.com/cosmos/ibc-go/v3/modules/apps/transfer/types"
 	clienttypes "github.com/cosmos/ibc-go/v3/modules/core/02-client/types"
@@ -17,11 +17,11 @@ import (
 	ibcgotesting "github.com/cosmos/ibc-go/v3/testing"
 	ibcmock "github.com/cosmos/ibc-go/v3/testing/mock"
 
-	claimstypes "github.com/AyrisDev/VinceFinance/x/claims/types"
-	incentivestypes "github.com/AyrisDev/VinceFinance/x/incentives/types"
-	"github.com/AyrisDev/VinceFinance/x/recovery/keeper"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
-	vestingtypes "github.com/AyrisDev/VinceFinance/x/vesting/types"
+	claimstypes "github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	incentivestypes "github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
+	vestingtypes "github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 func (suite *KeeperTestSuite) TestOnRecvPacket() {

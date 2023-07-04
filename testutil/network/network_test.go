@@ -14,7 +14,7 @@ import (
 	"github.com/tharsis/ethermint/server/config"
 	"github.com/tharsis/ethermint/testutil/network"
 
-	vincenetwork "github.com/AyrisDev/VinceFinance/testutil/network"
+	vincenetwork "github.com/AyrisDev/vinceChain_Blockchain/testutil/network"
 )
 
 type IntegrationTestSuite struct {

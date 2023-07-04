@@ -1,4 +1,4 @@
-module github.com/AyrisDev/VinceFinance
+module github.com/AyrisDev/vinceChain_Blockchain
 
 go 1.18
 

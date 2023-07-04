@@ -24,10 +24,10 @@ import (
 	ethermint "github.com/tharsis/ethermint/types"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	vincekr "github.com/AyrisDev/VinceFinance/crypto/keyring"
+	vincekr "github.com/AyrisDev/vinceChain_Blockchain/crypto/keyring"
 
-	vestingcli "github.com/AyrisDev/VinceFinance/x/vesting/client/cli"
-	vestingtypes "github.com/AyrisDev/VinceFinance/x/vesting/types"
+	vestingcli "github.com/AyrisDev/vinceChain_Blockchain/x/vesting/client/cli"
+	vestingtypes "github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 const (

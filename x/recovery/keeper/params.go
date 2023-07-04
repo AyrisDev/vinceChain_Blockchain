@@ -3,7 +3,7 @@ package keeper
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 // GetParams returns the total set of recovery parameters.

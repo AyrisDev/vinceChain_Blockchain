@@ -1,7 +1,7 @@
 package keeper_test
 
 import (
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 func (suite *KeeperTestSuite) TestParams() {

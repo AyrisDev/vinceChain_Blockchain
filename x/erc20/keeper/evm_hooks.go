@@ -11,8 +11,8 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/AyrisDev/VinceFinance/contracts"
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/contracts"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // Hooks wrapper struct for erc20 keeper

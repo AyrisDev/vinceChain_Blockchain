@@ -9,9 +9,9 @@ import (
 
 	"github.com/tharsis/ethermint/encoding"
 	"github.com/tharsis/ethermint/tests"
-	"github.com/AyrisDev/VinceFinance/app"
-	"github.com/AyrisDev/VinceFinance/app/ante"
-	"github.com/AyrisDev/VinceFinance/testutil"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	"github.com/AyrisDev/vinceChain_Blockchain/app/ante"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
@@ -22,7 +22,7 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 // Clawback vesting with Cliff and Lock. In this case the cliff is reached

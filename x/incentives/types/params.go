@@ -8,7 +8,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	epochtypes "github.com/AyrisDev/VinceFinance/x/epochs/types"
+	epochtypes "github.com/AyrisDev/vinceChain_Blockchain/x/epochs/types"
 )
 
 // Parameter store key

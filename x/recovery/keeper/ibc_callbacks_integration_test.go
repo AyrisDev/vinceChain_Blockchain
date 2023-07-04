@@ -8,10 +8,10 @@ import (
 	channeltypes "github.com/cosmos/ibc-go/v3/modules/core/04-channel/types"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/AyrisDev/VinceFinance/app"
-	"github.com/AyrisDev/VinceFinance/testutil"
-	claimtypes "github.com/AyrisDev/VinceFinance/x/claims/types"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
+	claimtypes "github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 var _ = Describe("Recovery: Performing an IBC Transfer", Ordered, func() {

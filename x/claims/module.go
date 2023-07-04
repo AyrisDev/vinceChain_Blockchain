@@ -17,9 +17,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/AyrisDev/VinceFinance/x/claims/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/claims/keeper"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 var (

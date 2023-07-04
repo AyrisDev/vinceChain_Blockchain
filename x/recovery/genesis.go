@@ -3,8 +3,8 @@ package recovery
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/x/recovery/keeper"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 // InitGenesis import module genesis

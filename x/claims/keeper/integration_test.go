@@ -23,10 +23,10 @@ import (
 	"github.com/tharsis/ethermint/encoding"
 	"github.com/tharsis/ethermint/tests"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
-	"github.com/AyrisDev/VinceFinance/app"
-	"github.com/AyrisDev/VinceFinance/testutil"
-	incentivestypes "github.com/AyrisDev/VinceFinance/x/incentives/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
+	incentivestypes "github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
@@ -35,8 +35,8 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tharsis/ethermint/server/config"
 	evm "github.com/tharsis/ethermint/x/evm/types"
-	"github.com/AyrisDev/VinceFinance/contracts"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/contracts"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 var _ = Describe("Claiming", Ordered, func() {

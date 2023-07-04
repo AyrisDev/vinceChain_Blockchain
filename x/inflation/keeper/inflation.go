@@ -7,8 +7,8 @@ import (
 
 	ethermint "github.com/tharsis/ethermint/types"
 
-	incentivestypes "github.com/AyrisDev/VinceFinance/x/incentives/types"
-	"github.com/AyrisDev/VinceFinance/x/inflation/types"
+	incentivestypes "github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 // 200M token at year 4 allocated to the team

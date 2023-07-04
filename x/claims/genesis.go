@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/x/claims/keeper"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 // InitGenesis initializes the claim module's state from a provided genesis

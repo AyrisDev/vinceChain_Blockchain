@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/AyrisDev/VinceFinance/x/epochs"
-	"github.com/AyrisDev/VinceFinance/x/epochs/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs/types"
 )
 
 func (suite *KeeperTestSuite) TestEpochInfoChangesBeginBlockerAndInitGenesis() {

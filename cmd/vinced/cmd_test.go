@@ -9,8 +9,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/genutil/client/cli"
 	"github.com/stretchr/testify/require"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	vinced "github.com/AyrisDev/VinceFinance/cmd/vinced"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	vinced "github.com/AyrisDev/vinceChain_Blockchain/cmd/vinced"
 )
 
 func TestInitCmd(t *testing.T) {

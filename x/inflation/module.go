@@ -19,9 +19,9 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/AyrisDev/VinceFinance/x/inflation/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/inflation/keeper"
-	"github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 // type check to ensure the interface is properly implemented

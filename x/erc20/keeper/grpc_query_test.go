@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"github.com/tharsis/ethermint/tests"
 
-	"github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 func (suite *KeeperTestSuite) TestTokenPairs() {

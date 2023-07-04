@@ -5,8 +5,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	vrftypes "github.com/AyrisDev/VinceFinance/x/vrf/types"
-	// erc20types "github.com/AyrisDev/VinceFinance/x/erc20/types"
+	vrftypes "github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
+	// erc20types "github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 // CreateUpgradeHandler creates an SDK upgrade handler for v2

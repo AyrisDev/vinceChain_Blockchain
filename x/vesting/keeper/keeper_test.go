@@ -35,9 +35,9 @@ import (
 	ethermint "github.com/tharsis/ethermint/types"
 	evm "github.com/tharsis/ethermint/x/evm/types"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	"github.com/AyrisDev/VinceFinance/contracts"
-	"github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	"github.com/AyrisDev/vinceChain_Blockchain/contracts"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 var (

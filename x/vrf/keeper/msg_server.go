@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 )
 
 type msgServer struct {

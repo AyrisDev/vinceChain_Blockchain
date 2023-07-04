@@ -3,8 +3,8 @@ package client
 import (
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
 
-	"github.com/AyrisDev/VinceFinance/x/incentives/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/incentives/client/rest"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/client/rest"
 )
 
 var (

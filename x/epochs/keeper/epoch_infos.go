@@ -4,7 +4,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/x/epochs/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs/types"
 )
 
 // GetEpochInfo returns epoch info by identifier

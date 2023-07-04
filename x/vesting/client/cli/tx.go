@@ -16,7 +16,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 
-	"github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 // Transaction command flags

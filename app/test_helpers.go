@@ -16,7 +16,7 @@ import (
 	"github.com/tharsis/ethermint/encoding"
 	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
-	"github.com/AyrisDev/VinceFinance/cmd/config"
+	"github.com/AyrisDev/vinceChain_Blockchain/cmd/config"
 )
 
 func init() {

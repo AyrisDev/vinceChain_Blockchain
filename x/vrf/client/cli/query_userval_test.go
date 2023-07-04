@@ -12,9 +12,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/AyrisDev/VinceFinance/testutil/network"
-	"github.com/AyrisDev/VinceFinance/x/vrf/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil/network"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 )
 
 // Prevent strconv unused error

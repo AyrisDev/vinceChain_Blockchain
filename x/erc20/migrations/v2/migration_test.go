@@ -12,9 +12,9 @@ import (
 
 	"github.com/tharsis/ethermint/encoding"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	v2 "github.com/AyrisDev/VinceFinance/x/erc20/migrations/v2"
-	erc20types "github.com/AyrisDev/VinceFinance/x/erc20/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	v2 "github.com/AyrisDev/vinceChain_Blockchain/x/erc20/migrations/v2"
+	erc20types "github.com/AyrisDev/vinceChain_Blockchain/x/erc20/types"
 )
 
 func TestUpdateParams(t *testing.T) {

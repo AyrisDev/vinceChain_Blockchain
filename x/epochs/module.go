@@ -20,9 +20,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/AyrisDev/VinceFinance/x/epochs/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/epochs/keeper"
-	"github.com/AyrisDev/VinceFinance/x/epochs/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/epochs/types"
 )
 
 var (

@@ -15,10 +15,10 @@ import (
 	"github.com/tharsis/ethermint/tests"
 	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 
-	"github.com/AyrisDev/VinceFinance/app"
-	"github.com/AyrisDev/VinceFinance/x/claims"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 type GenesisTestSuite struct {

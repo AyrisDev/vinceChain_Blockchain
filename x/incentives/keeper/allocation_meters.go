@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/AyrisDev/VinceFinance/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
 )
 
 // GetAllAllocationMeters - get all registered AllocationMeters

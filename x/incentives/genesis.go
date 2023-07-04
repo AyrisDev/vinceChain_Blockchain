@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 
-	"github.com/AyrisDev/VinceFinance/x/incentives/keeper"
-	"github.com/AyrisDev/VinceFinance/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
 )
 
 // InitGenesis import module genesis

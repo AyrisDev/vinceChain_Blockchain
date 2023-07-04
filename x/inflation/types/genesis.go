@@ -3,7 +3,7 @@ package types
 import (
 	fmt "fmt"
 
-	epochtypes "github.com/AyrisDev/VinceFinance/x/epochs/types"
+	epochtypes "github.com/AyrisDev/vinceChain_Blockchain/x/epochs/types"
 )
 
 // NewGenesisState creates a new GenesisState object

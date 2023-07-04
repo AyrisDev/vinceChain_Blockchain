@@ -9,10 +9,10 @@ import (
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	"github.com/tharsis/ethermint/tests"
 
-	"github.com/AyrisDev/VinceFinance/testutil"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
-	vestingtypes "github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
+	vestingtypes "github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 func (suite *KeeperTestSuite) TestEndBlock() {

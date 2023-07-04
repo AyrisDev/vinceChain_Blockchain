@@ -13,7 +13,7 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	sdkvesting "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 
-	"github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 var _ types.MsgServer = &Keeper{}

@@ -7,7 +7,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 )
 
 type (

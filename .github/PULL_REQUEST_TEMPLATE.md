@@ -1,5 +1,5 @@
 <!-- < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < < ☺
-v                               ✰  Thanks for creating a PR! ✰    
+v                               ✰  Thanks for creating a PR! ✰
 v    Before smashing the submit button please review the checkboxes.
 v    If a checkbox is n/a - please still include it but + a little note why
 ☺ > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > > >  -->
@@ -12,7 +12,7 @@ are the most critical to review.
 
 Closes: #XXX
 
-______
+---
 
 **All** items are required. Please add a note to the item if the item is not applicable and
 please add links to any relevant follow up issues.
@@ -23,7 +23,7 @@ I have...
 
 - [ ] added a relevant changelog entry to the `Unreleased` section in `CHANGELOG.md`
 - [ ] included the correct [type prefix](https://github.com/commitizen/conventional-commit-types/blob/v3.0.0/index.json) in the PR title
-- [ ] targeted the correct branch (see [PR Targeting](https://github.com/AyrisDev/VinceFinance/blob/main/CONTRIBUTING.md#pr-targeting))
+- [ ] targeted the correct branch (see [PR Targeting](https://github.com/AyrisDev/vinceChain_Blockchain/blob/main/CONTRIBUTING.md#pr-targeting))
 - [ ] provided a link in the PR description to the relevant issue or specification
 - [ ] reviewed "Files changed" and left comments if necessary
 - [ ] confirmed all required CI checks have passed
@@ -32,11 +32,11 @@ Code maintenance:
 
 I have...
 
-- [ ] written unit and integration [tests](https://github.com/AyrisDev/VinceFinance/blob/main/CONTRIBUTING.md#testing)
+- [ ] written unit and integration [tests](https://github.com/AyrisDev/vinceChain_Blockchain/blob/main/CONTRIBUTING.md#testing)
 - [ ] added relevant [`godoc`](https://go.dev/blog/godoc) and [code comments](https://blog.jbowen.dev/2019/09/the-magic-of-go-comments/).
 - [ ] updated relevant documentation (`docs/`) or specification (`x/<module>/spec/`)
 
-______
+---
 
 ### Reviewers Checklist
 

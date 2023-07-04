@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 	"github.com/stretchr/testify/require"
 )
 

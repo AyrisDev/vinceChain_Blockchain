@@ -10,7 +10,7 @@ RUN apk add --update-cache \
     make \
     wget
 
-RUN git clone https://github.com/AyrisDev/VinceFinance.git /vince && \
+RUN git clone https://github.com/AyrisDev/vinceChain_Blockchain.git /vince && \
     #chmod -R 755 /vince && \
     chmod -R 755 /vince
 WORKDIR /vince

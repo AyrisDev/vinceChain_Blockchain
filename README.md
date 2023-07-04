@@ -12,25 +12,25 @@ parent:
 <!-- ![banner](docs/ethermint.jpg) -->
 
 <div align="center">
-  <a href="https://github.com/AyrisDev/VinceFinance/releases/latest">
+  <a href="https://github.com/AyrisDev/vinceChain_Blockchain/releases/latest">
     <img alt="Version" src="https://img.shields.io/github/tag/vincefoundation/vince.svg" />
   </a>
-  <a href="https://github.com/AyrisDev/VinceFinance/blob/main/LICENSE">
+  <a href="https://github.com/AyrisDev/vinceChain_Blockchain/blob/main/LICENSE">
     <img alt="License: Apache-2.0" src="https://img.shields.io/github/license/vincefoundation/vince.svg" />
   </a>
-  <a href="https://pkg.go.dev/github.com/AyrisDev/VinceFinance">
-    <img alt="GoDoc" src="https://godoc.org/github.com/AyrisDev/VinceFinance?status.svg" />
+  <a href="https://pkg.go.dev/github.com/AyrisDev/vinceChain_Blockchain">
+    <img alt="GoDoc" src="https://godoc.org/github.com/AyrisDev/vinceChain_Blockchain?status.svg" />
   </a>
-  <a href="https://goreportcard.com/report/github.com/AyrisDev/VinceFinance">
-    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/AyrisDev/VinceFinance"/>
+  <a href="https://goreportcard.com/report/github.com/AyrisDev/vinceChain_Blockchain">
+    <img alt="Go report card" src="https://goreportcard.com/badge/github.com/AyrisDev/vinceChain_Blockchain"/>
   </a>
 </div>
 <div align="center">
   <a href="https://discord.gg/ArXNfK99ae">
     <img alt="Discord" src="https://img.shields.io/discord/962917488180490250.svg" />
   </a>
-  <a href="https://github.com/AyrisDev/VinceFinance/actions?query=branch%3Amain+workflow%3ALint">
-    <img alt="Lint Status" src="https://github.com/AyrisDev/VinceFinance/actions/workflows/lint.yml/badge.svg?branch=main" />
+  <a href="https://github.com/AyrisDev/vinceChain_Blockchain/actions?query=branch%3Amain+workflow%3ALint">
+    <img alt="Lint Status" src="https://github.com/AyrisDev/vinceChain_Blockchain/actions/workflows/lint.yml/badge.svg?branch=main" />
   </a>
   <a href="https://codecov.io/gh/vincefoundation/vince">
     <img alt="Code Coverage" src="https://codecov.io/gh/vincefoundation/vince/branch/main/graph/badge.svg" />
@@ -53,9 +53,10 @@ For prerequisites and detailed build instructions please read the [Installation]
 make install
 ```
 
-Or check out the latest [release](https://github.com/AyrisDev/VinceFinance/releases).
+Or check out the latest [release](https://github.com/AyrisDev/vinceChain_Blockchain/releases).
 
 ## Genesis
+
 To get onto our mainnet (vince_5000-1) genesis download the genesis.json here
 
 `wget https://gist.githubusercontent.com/vincefoundation/ee862f58850fc1b5ee6a6fdccc3130d2/raw/55c2c4ea2fee8a9391d0dc55b2c272adb804054a/genesis.json`
@@ -82,7 +83,7 @@ The following chat channels and forums are a great spot to ask questions about v
 
 ## Contributing
 
-Looking for a good place to start contributing? Check out some [`good first issues`](https://github.com/AyrisDev/VinceFinance/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Looking for a good place to start contributing? Check out some [`good first issues`](https://github.com/AyrisDev/vinceChain_Blockchain/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
 Original codebase forked from [EVMOS](https://github.com/evmos/evmos)
 

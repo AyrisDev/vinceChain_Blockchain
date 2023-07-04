@@ -2,8 +2,8 @@ package vrf
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/AyrisDev/VinceFinance/x/vrf/keeper"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

@@ -4,7 +4,7 @@ import "vince/incentives/v1/incentives.proto";
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/AyrisDev/VinceFinance/x/incentives/types";
+option go_package = "github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types";
 
 // GenesisState defines the module's genesis state.
 message GenesisState {

@@ -19,9 +19,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/AyrisDev/VinceFinance/x/recovery/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/recovery/keeper"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 // type check to ensure the interface is properly implemented

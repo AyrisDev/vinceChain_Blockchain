@@ -18,9 +18,9 @@ import (
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 
-	"github.com/AyrisDev/VinceFinance/x/vesting/client/cli"
-	"github.com/AyrisDev/VinceFinance/x/vesting/keeper"
-	"github.com/AyrisDev/VinceFinance/x/vesting/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/client/cli"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vesting/types"
 )
 
 var (

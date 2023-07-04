@@ -13,7 +13,7 @@ VINCE_BINARY = vinced
 VINCE_DIR = vince
 BUILDDIR ?= $(CURDIR)/build
 SIMAPP = ./app
-HTTPS_GIT := https://github.com/AyrisDev/VinceFinance.git
+HTTPS_GIT := https://github.com/AyrisDev/vinceChain_Blockchain.git
 DOCKER := $(shell which docker)
 DOCKER_BUF := $(DOCKER) run --rm -v $(CURDIR):/workspace --workdir /workspace bufbuild/buf
 NAMESPACE := tharsishq
@@ -288,7 +288,7 @@ update-swagger-docs: statik
 .PHONY: update-swagger-docs
 
 godocs:
-	@echo "--> Wait a few seconds and visit http://localhost:6060/pkg/github.com/AyrisDev/VinceFinance/types"
+	@echo "--> Wait a few seconds and visit http://localhost:6060/pkg/github.com/AyrisDev/vinceChain_Blockchain/types"
 	godoc -http=:6060
 
 # Start docs site at localhost:8080
@@ -439,7 +439,7 @@ lint-fix-contracts:
 format:
 	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./client/docs/statik/statik.go" -not -name '*.pb.go' | xargs gofmt -w -s
 	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./client/docs/statik/statik.go" -not -name '*.pb.go' | xargs misspell -w
-	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./client/docs/statik/statik.go" -not -name '*.pb.go' | xargs goimports -w -local github.com/AyrisDev/VinceFinance
+	find . -name '*.go' -type f -not -path "./vendor*" -not -path "*.git*" -not -path "./client/docs/statik/statik.go" -not -name '*.pb.go' | xargs goimports -w -local github.com/AyrisDev/vinceChain_Blockchain
 .PHONY: format
 
 ###############################################################################
@@ -567,7 +567,7 @@ localnet-show-logstream:
 ###                                Releasing                                ###
 ###############################################################################
 
-PACKAGE_NAME:=github.com/AyrisDev/VinceFinance
+PACKAGE_NAME:=github.com/AyrisDev/vinceChain_Blockchain
 GOLANG_CROSS_VERSION  = v1.18
 GOPATH ?= '$(HOME)/go'
 release-dry-run:

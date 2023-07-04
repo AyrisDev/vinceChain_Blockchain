@@ -9,9 +9,9 @@ import (
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tharsis/ethermint/encoding"
-	"github.com/AyrisDev/VinceFinance/app"
-	v2 "github.com/AyrisDev/VinceFinance/x/claims/migrations/v2"
-	claims "github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	v2 "github.com/AyrisDev/vinceChain_Blockchain/x/claims/migrations/v2"
+	claims "github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 func TestStoreMigration(t *testing.T) {

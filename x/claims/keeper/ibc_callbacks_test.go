@@ -18,10 +18,10 @@ import (
 	ibcmock "github.com/cosmos/ibc-go/v3/testing/mock"
 
 	"github.com/tharsis/ethermint/tests"
-	"github.com/AyrisDev/VinceFinance/app"
-	ibctesting "github.com/AyrisDev/VinceFinance/ibc/testing"
-	"github.com/AyrisDev/VinceFinance/testutil"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	ibctesting "github.com/AyrisDev/vinceChain_Blockchain/ibc/testing"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
 )
 
 type IBCTestingSuite struct {

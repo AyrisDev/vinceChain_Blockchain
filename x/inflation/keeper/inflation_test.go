@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	incentivestypes "github.com/AyrisDev/VinceFinance/x/incentives/types"
-	"github.com/AyrisDev/VinceFinance/x/inflation/types"
+	incentivestypes "github.com/AyrisDev/vinceChain_Blockchain/x/incentives/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 func (suite *KeeperTestSuite) TestMintAndAllocateInflation() {

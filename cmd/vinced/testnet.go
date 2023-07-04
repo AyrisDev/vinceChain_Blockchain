@@ -43,9 +43,9 @@ import (
 	ethermint "github.com/tharsis/ethermint/types"
 	evmtypes "github.com/tharsis/ethermint/x/evm/types"
 
-	cmdcfg "github.com/AyrisDev/VinceFinance/cmd/config"
-	vincekr "github.com/AyrisDev/VinceFinance/crypto/keyring"
-	"github.com/AyrisDev/VinceFinance/testutil/network"
+	cmdcfg "github.com/AyrisDev/vinceChain_Blockchain/cmd/config"
+	vincekr "github.com/AyrisDev/vinceChain_Blockchain/crypto/keyring"
+	"github.com/AyrisDev/vinceChain_Blockchain/testutil/network"
 )
 
 var (

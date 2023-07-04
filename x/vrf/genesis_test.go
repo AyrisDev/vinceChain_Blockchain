@@ -3,9 +3,9 @@ package vrf_test
 import (
 	"testing"
 
-	keepertest "github.com/AyrisDev/VinceFinance/testutil/keeper"
-	"github.com/AyrisDev/VinceFinance/x/vrf"
-	"github.com/AyrisDev/VinceFinance/x/vrf/types"
+	keepertest "github.com/AyrisDev/vinceChain_Blockchain/testutil/keeper"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/vrf/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/tharsis/ethermint/tests"
-	"github.com/AyrisDev/VinceFinance/x/claims/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
 )
 
 func (suite *KeeperTestSuite) TestTotalUnclaimed() {

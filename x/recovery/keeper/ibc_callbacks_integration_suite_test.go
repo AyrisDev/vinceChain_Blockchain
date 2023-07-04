@@ -15,13 +15,13 @@ import (
 	channeltypes "github.com/cosmos/ibc-go/v3/modules/core/04-channel/types"
 	ibcgotesting "github.com/cosmos/ibc-go/v3/testing"
 
-	ibctesting "github.com/AyrisDev/VinceFinance/ibc/testing"
+	ibctesting "github.com/AyrisDev/vinceChain_Blockchain/ibc/testing"
 
 	minttypes "github.com/cosmos/cosmos-sdk/x/mint/types"
-	"github.com/AyrisDev/VinceFinance/app"
-	claimtypes "github.com/AyrisDev/VinceFinance/x/claims/types"
-	inflationtypes "github.com/AyrisDev/VinceFinance/x/inflation/types"
-	"github.com/AyrisDev/VinceFinance/x/recovery/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/app"
+	claimtypes "github.com/AyrisDev/vinceChain_Blockchain/x/claims/types"
+	inflationtypes "github.com/AyrisDev/vinceChain_Blockchain/x/inflation/types"
+	"github.com/AyrisDev/vinceChain_Blockchain/x/recovery/types"
 )
 
 type IBCTestingSuite struct {
