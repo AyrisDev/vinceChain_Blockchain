@@ -9,15 +9,15 @@ can be modified via governance.
 
 | Key                      | Type                   | Default Value                                                                 |
 | ------------------------ | ---------------------- | ----------------------------------------------------------------------------- |
-| `MintDenom`              | string                 | `evm.DefaultEVMDenom` // “avince”                                             |
+| `MintDenom`              | string                 | `evm.DefaultEVMDenom` // “avce”                                               |
 | `ExponentialCalculation` | ExponentialCalculation | `A: sdk.NewDec(int64(300_000_000))`                                           |
 |                          |                        | `R: sdk.NewDecWithPrec(50, 2)`                                                |
 |                          |                        | `C: sdk.NewDec(int64(9_375_000))`                                             |
 |                          |                        | `BondingTarget: sdk.NewDecWithPrec(66, 2)`                                    |
 |                          |                        | `MaxVariance: sdk.ZeroDec()`                                                  |
-| `InflationDistribution`  | InflationDistribution  | `StakingRewards: sdk.NewDecWithPrec(533333334, 9)`  // 0.53 = 40% / (1 - 25%) |
+| `InflationDistribution`  | InflationDistribution  | `StakingRewards: sdk.NewDecWithPrec(533333334, 9)` // 0.53 = 40% / (1 - 25%)  |
 |                          |                        | `UsageIncentives: sdk.NewDecWithPrec(333333333, 9)` // 0.33 = 25% / (1 - 25%) |
-|                          |                        | `CommunityPool: sdk.NewDecWithPrec(133333333, 9)`  // 0.13 = 10% / (1 - 25%)  |
+|                          |                        | `CommunityPool: sdk.NewDecWithPrec(133333333, 9)` // 0.13 = 10% / (1 - 25%)   |
 | `EnableInflation`        | bool                   | `true`                                                                        |
 
 ## Mint Denom
@@ -38,7 +38,7 @@ can be found under
 
 The `IinflationDistribution` parameter defines the distribution in which
 inflation is allocated through minting on each epoch (`stakingRewards`,
-`usageIncentives`,  `CommunityPool`). The `x/inflation` excludes the team
+`usageIncentives`, `CommunityPool`). The `x/inflation` excludes the team
 vesting distribution, as team vesting is minted once at genesis. To reflect this
 the distribution from the vince Token Model is recalculated into a distribution
 that excludes team vesting. Note, that this does not change the inflation
@@ -47,7 +47,7 @@ calculated like this:
 
 ```markdown
 stakingRewards = vinceTokenModelDistribution / (1 - teamVestingDistribution)
-0.5333333      = 40%                         / (1 - 25%)
+0.5333333 = 40% / (1 - 25%)
 ```
 
 ## Enable Inflation

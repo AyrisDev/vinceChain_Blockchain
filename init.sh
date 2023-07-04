@@ -22,12 +22,12 @@ yes $KEYPASSWD | vinced keys add $KEY --keyring-backend $KEYRING --algo $KEYALGO
 # Set moniker and chain-id for vince (Moniker can be anything, chain-id must be an integer)
 vinced init $MONIKER --chain-id $CHAINID
 
-# Change parameter token denominations to avince
-cat $HOME/.vinced/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="avince"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
-cat $HOME/.vinced/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="avince"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
-cat $HOME/.vinced/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="avince"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
-cat $HOME/.vinced/config/genesis.json | jq '.app_state["evm"]["params"]["evm_denom"]="avince"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
-cat $HOME/.vinced/config/genesis.json | jq '.app_state["inflation"]["params"]["mint_denom"]="avince"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+# Change parameter token denominations to avce
+cat $HOME/.vinced/config/genesis.json | jq '.app_state["staking"]["params"]["bond_denom"]="avce"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+cat $HOME/.vinced/config/genesis.json | jq '.app_state["crisis"]["constant_fee"]["denom"]="avce"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+cat $HOME/.vinced/config/genesis.json | jq '.app_state["gov"]["deposit_params"]["min_deposit"][0]["denom"]="avce"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+cat $HOME/.vinced/config/genesis.json | jq '.app_state["evm"]["params"]["evm_denom"]="avce"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+cat $HOME/.vinced/config/genesis.json | jq '.app_state["inflation"]["params"]["mint_denom"]="avce"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
 
 # For testing purposes only
 cat $HOME/.vinced/config/genesis.json | jq '.app_state["gov"]["voting_params"]["voting_period"]="30s"' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
@@ -53,7 +53,7 @@ amount_to_claim=1000000
 
 # Claim module account:
 # 0xA61808Fe40fEb8B3433778BBC2ecECCAA47c8c47 || vince
-cat $HOME/.vinced/config/genesis.json | jq -r --arg amount_to_claim "$amount_to_claim" '.app_state["bank"]["balances"] += [{"address":"vince15cvq3ljql6utxseh0zau9m8ve2j8erz8jy7kzu","coins":[{"denom":"avince", "amount":$amount_to_claim}]}]' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
+cat $HOME/.vinced/config/genesis.json | jq -r --arg amount_to_claim "$amount_to_claim" '.app_state["bank"]["balances"] += [{"address":"vince15cvq3ljql6utxseh0zau9m8ve2j8erz8jy7kzu","coins":[{"denom":"avce", "amount":$amount_to_claim}]}]' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
 
 # disable produce empty block
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -87,7 +87,7 @@ if [[ $1 == "pending" ]]; then
 fi
 
 # Allocate genesis accounts (cosmos formatted addresses) 150 million to evm
-vinced add-genesis-account $KEY 150000000000000000000000000avince --keyring-backend $KEYRING
+vinced add-genesis-account $KEY 150000000000000000000000000avce --keyring-backend $KEYRING
 
 # Update total supply with claim values
 validators_supply=$(cat $HOME/.vinced/config/genesis.json | jq -r '.app_state["bank"]["supply"][0]["amount"]')
@@ -97,7 +97,7 @@ total_supply=150000000000000000001000000 # 1000000
 cat $HOME/.vinced/config/genesis.json | jq -r --arg total_supply "$total_supply" '.app_state["bank"]["supply"][0]["amount"]=$total_supply' > $HOME/.vinced/config/tmp_genesis.json && mv $HOME/.vinced/config/tmp_genesis.json $HOME/.vinced/config/genesis.json
 
 # Sign genesis transaction for validator
-vinced gentx $KEY 1000000000000000000000000avince --keyring-backend $KEYRING --chain-id $CHAINID
+vinced gentx $KEY 1000000000000000000000000avce --keyring-backend $KEYRING --chain-id $CHAINID
 
 # Collect genesis tx
 vinced collect-gentxs
@@ -110,4 +110,4 @@ if [[ $1 == "pending" ]]; then
 fi
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)
-vinced start --pruning=nothing $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001avince --json-rpc.api eth,txpool,personal,net,debug,web3
+vinced start --pruning=nothing $TRACE --log_level $LOGLEVEL --minimum-gas-prices=0.0001avce --json-rpc.api eth,txpool,personal,net,debug,web3

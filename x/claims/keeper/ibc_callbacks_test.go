@@ -49,7 +49,7 @@ func (suite *IBCTestingSuite) SetupTest() {
 
 	claimsRecord := types.NewClaimsRecord(sdk.NewInt(10000))
 	addr := sdk.AccAddress(tests.GenerateAddress().Bytes())
-	coins := sdk.NewCoins(sdk.NewCoin("avince", sdk.NewInt(10000)))
+	coins := sdk.NewCoins(sdk.NewCoin("avce", sdk.NewInt(10000)))
 
 	err := testutil.FundModuleAccount(suite.chainB.App.(*app.Vince).BankKeeper, suite.chainB.GetContext(), types.ModuleName, coins)
 	suite.Require().NoError(err)
@@ -107,7 +107,7 @@ func (suite *IBCTestingSuite) TestOnReceiveClaim() {
 			"correct execution - Claimable Transfer",
 			func(claimableAmount int64) {
 				amt := sdk.NewInt(claimableAmount)
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt))
 				suite.chainB.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainB.GetContext(), senderAddr, types.NewClaimsRecord(amt))
 
 				// update the escrowed account balance to maintain the invariant
@@ -122,7 +122,7 @@ func (suite *IBCTestingSuite) TestOnReceiveClaim() {
 			"correct execution - Merge Transfer",
 			func(claimableAmount int64) {
 				amt := sdk.NewInt(claimableAmount)
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt.Add(amt.QuoRaw(2))))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt.Add(amt.QuoRaw(2))))
 
 				suite.chainB.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainB.GetContext(), senderAddr, types.ClaimsRecord{InitialClaimableAmount: amt, ActionsCompleted: []bool{false, false, false, false}})
 				suite.chainB.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainB.GetContext(), receiverAddr, types.ClaimsRecord{InitialClaimableAmount: amt, ActionsCompleted: []bool{false, true, true, false}})
@@ -151,7 +151,7 @@ func (suite *IBCTestingSuite) TestOnReceiveClaim() {
 				amt := sdk.NewInt(claimableAmount)
 				suite.chainB.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainB.GetContext(), receiverAddr, types.ClaimsRecord{InitialClaimableAmount: amt, ActionsCompleted: []bool{false, false, false, false}})
 
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt))
 				// update the escrowed account balance to maintain the invariant
 				err := testutil.FundModuleAccount(suite.chainB.App.(*app.Vince).BankKeeper, suite.chainB.GetContext(), types.ModuleName, coins)
 				suite.Require().NoError(err)
@@ -197,7 +197,7 @@ func (suite *IBCTestingSuite) TestOnReceiveClaim() {
 
 			tc.malleate(tc.claimableAmount)
 
-			transfer := transfertypes.NewFungibleTokenPacketData("avince", triggerAmt, sender, receiver)
+			transfer := transfertypes.NewFungibleTokenPacketData("avce", triggerAmt, sender, receiver)
 			bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 			packet := channeltypes.NewPacket(bz, 1, path.EndpointA.ChannelConfig.PortID, path.EndpointA.ChannelID, path.EndpointB.ChannelConfig.PortID, path.EndpointB.ChannelID, timeoutHeight, 0)
 
@@ -209,13 +209,13 @@ func (suite *IBCTestingSuite) TestOnReceiveClaim() {
 			suite.Require().NoError(err)
 
 			if tc.expPass {
-				coin := suite.chainB.App.(*app.Vince).BankKeeper.GetBalance(suite.chainB.GetContext(), receiverAddr, "avince")
-				suite.Require().Equal(coin.String(), sdk.NewCoin("avince", sdk.NewInt(tc.expectedBalance)).String())
+				coin := suite.chainB.App.(*app.Vince).BankKeeper.GetBalance(suite.chainB.GetContext(), receiverAddr, "avce")
+				suite.Require().Equal(coin.String(), sdk.NewCoin("avce", sdk.NewInt(tc.expectedBalance)).String())
 				_, found := suite.chainB.App.(*app.Vince).ClaimsKeeper.GetClaimsRecord(suite.chainB.GetContext(), receiverAddr)
 				suite.Require().True(found)
 			} else {
-				coin := suite.chainB.App.(*app.Vince).BankKeeper.GetBalance(suite.chainB.GetContext(), receiverAddr, "avince")
-				suite.Require().Equal(coin.String(), sdk.NewCoin("avince", sdk.NewInt(tc.expectedBalance)).String())
+				coin := suite.chainB.App.(*app.Vince).BankKeeper.GetBalance(suite.chainB.GetContext(), receiverAddr, "avce")
+				suite.Require().Equal(coin.String(), sdk.NewCoin("avce", sdk.NewInt(tc.expectedBalance)).String())
 				_, found := suite.chainB.App.(*app.Vince).ClaimsKeeper.GetClaimsRecord(suite.chainB.GetContext(), receiverAddr)
 				suite.Require().False(found)
 			}
@@ -241,7 +241,7 @@ func (suite *IBCTestingSuite) TestOnAckClaim() {
 			"correct execution - Claimable Transfer",
 			func(claimableAmount int64) {
 				amt := sdk.NewInt(claimableAmount)
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt))
 
 				suite.chainA.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainA.GetContext(), senderAddr, types.NewClaimsRecord(amt))
 				// update the escrowed account balance to maintain the invariant
@@ -256,7 +256,7 @@ func (suite *IBCTestingSuite) TestOnAckClaim() {
 			"correct execution - Claimable Transfer",
 			func(claimableAmount int64) {
 				amt := sdk.NewInt(claimableAmount)
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt))
 
 				suite.chainA.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainA.GetContext(), senderAddr, types.NewClaimsRecord(amt))
 				// update the escrowed account balance to maintain the invariant
@@ -271,7 +271,7 @@ func (suite *IBCTestingSuite) TestOnAckClaim() {
 			"correct execution - Claimed transfer",
 			func(claimableAmount int64) {
 				amt := sdk.NewInt(claimableAmount)
-				coins := sdk.NewCoins(sdk.NewCoin("avince", amt))
+				coins := sdk.NewCoins(sdk.NewCoin("avce", amt))
 
 				suite.chainA.App.(*app.Vince).ClaimsKeeper.SetClaimsRecord(suite.chainA.GetContext(), senderAddr, types.ClaimsRecord{InitialClaimableAmount: amt, ActionsCompleted: []bool{true, true, true, true}})
 
@@ -310,7 +310,7 @@ func (suite *IBCTestingSuite) TestOnAckClaim() {
 
 			tc.malleate(tc.claimableAmount)
 
-			transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", sender, receiver)
+			transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", sender, receiver)
 			bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 			packet := channeltypes.NewPacket(bz, 1, path.EndpointA.ChannelConfig.PortID, path.EndpointA.ChannelID, path.EndpointB.ChannelConfig.PortID, path.EndpointB.ChannelID, timeoutHeight, 0)
 
@@ -322,14 +322,14 @@ func (suite *IBCTestingSuite) TestOnAckClaim() {
 			suite.Require().NoError(err)
 
 			if tc.expPass {
-				coin := suite.chainA.App.(*app.Vince).BankKeeper.GetBalance(suite.chainA.GetContext(), senderAddr, "avince")
-				suite.Require().Equal(coin.String(), sdk.NewCoin("avince", sdk.NewInt(tc.expectedBalance)).String())
+				coin := suite.chainA.App.(*app.Vince).BankKeeper.GetBalance(suite.chainA.GetContext(), senderAddr, "avce")
+				suite.Require().Equal(coin.String(), sdk.NewCoin("avce", sdk.NewInt(tc.expectedBalance)).String())
 				claim, found := suite.chainA.App.(*app.Vince).ClaimsKeeper.GetClaimsRecord(suite.chainA.GetContext(), senderAddr)
 				suite.Require().True(found)
 				suite.Require().Equal(claim.InitialClaimableAmount, sdk.NewInt(4))
 			} else {
-				coin := suite.chainA.App.(*app.Vince).BankKeeper.GetBalance(suite.chainA.GetContext(), senderAddr, "avince")
-				suite.Require().Equal(coin.String(), sdk.NewCoin("avince", sdk.NewInt(tc.expectedBalance)).String())
+				coin := suite.chainA.App.(*app.Vince).BankKeeper.GetBalance(suite.chainA.GetContext(), senderAddr, "avce")
+				suite.Require().Equal(coin.String(), sdk.NewCoin("avce", sdk.NewInt(tc.expectedBalance)).String())
 				_, found := suite.chainA.App.(*app.Vince).ClaimsKeeper.GetClaimsRecord(suite.chainA.GetContext(), senderAddr)
 				suite.Require().False(found)
 			}
@@ -374,7 +374,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"fail - params, channel not authorized",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-100", timeoutHeight, 0)
 
@@ -394,7 +394,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"fail - invalid sender",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", "vince", receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", "vince", receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -405,7 +405,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"fail - invalid sender 2",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", "badba1sv9m0g7ycejwr3s369km58h5qe7xj77hvcxrms", receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", "badba1sv9m0g7ycejwr3s369km58h5qe7xj77hvcxrms", receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -416,7 +416,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"fail - invalid recipient",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", receiverStr, "badbadhf0468jjpe6m6vx38s97z2qqe8ldu0njdyf625")
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", receiverStr, "badbadhf0468jjpe6m6vx38s97z2qqe8ldu0njdyf625")
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -428,7 +428,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 			"fail - blocked recipient (deny list)",
 			func() {
 				blockedAddr := authtypes.NewModuleAddress(transfertypes.ModuleName)
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, blockedAddr.String())
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, blockedAddr.String())
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -439,7 +439,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"pass - sender and receiver address is the same (no claim record) - attempt recovery",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", secpAddrCosmos, secpAddrVince)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", secpAddrCosmos, secpAddrVince)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -450,7 +450,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"fail - sender and receiver address are the same (with claim record)",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", secpAddrCosmos, secpAddrVince)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", secpAddrCosmos, secpAddrVince)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -463,7 +463,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 1: sender ≠ recipient",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", triggerAmt, senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", triggerAmt, senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -481,7 +481,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 1 - continue: sender ≠ recipient, but wrong triggerAmt",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -498,7 +498,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 1 - fail: not enough funds on escrow account",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", triggerAmt, senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", triggerAmt, senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -515,7 +515,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 2: same sender ≠ recipient, sender claims record found",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", triggerAmt, senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", triggerAmt, senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -532,7 +532,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 2 - continue: same sender ≠ recipient, sender claims record found, but wrong triggerAmt",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -549,7 +549,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 3: same sender ≠ recipient, recipient claims record found",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 
@@ -565,7 +565,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 3: same sender with EVM channel, with claims record",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", secpAddrCosmos, secpAddrVince)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", secpAddrCosmos, secpAddrVince)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, types.DefaultEVMChannels[0], timeoutHeight, 0)
 
@@ -581,7 +581,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 3 fail: not enough funds on escrow account",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", secpAddrCosmos, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", secpAddrCosmos, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, "channel-0", timeoutHeight, 0)
 				suite.app.ClaimsKeeper.SetClaimsRecord(suite.ctx, receiver, types.NewClaimsRecord(sdk.NewInt(1000000000000000)))
@@ -599,7 +599,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 4: sender different than recipient, no claims records",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", senderStr, receiverStr)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", senderStr, receiverStr)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, types.DefaultAuthorizedChannels[0], timeoutHeight, 0)
 
@@ -613,7 +613,7 @@ func (suite *KeeperTestSuite) TestReceive() {
 		{
 			"case 4: same sender with EVM channel, no claims record",
 			func() {
-				transfer := transfertypes.NewFungibleTokenPacketData("avince", "100", secpAddrCosmos, secpAddrVince)
+				transfer := transfertypes.NewFungibleTokenPacketData("avce", "100", secpAddrCosmos, secpAddrVince)
 				bz := transfertypes.ModuleCdc.MustMarshalJSON(&transfer)
 				packet := channeltypes.NewPacket(bz, 1, transfertypes.PortID, "channel-0", transfertypes.PortID, types.DefaultEVMChannels[0], timeoutHeight, 0)
 

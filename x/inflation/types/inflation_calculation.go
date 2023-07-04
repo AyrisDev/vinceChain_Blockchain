@@ -41,7 +41,7 @@ func CalculateEpochMintProvision(
 
 	// Multiply epochMintProvision with power reduction (10^18 for vince) as the
 	// calculation is based on `vince` and the issued tokens need to be given in
-	// `avince`
+	// `avce`
 	epochProvision = epochProvision.Mul(ethermint.PowerReduction.ToDec())
 	return epochProvision
 }

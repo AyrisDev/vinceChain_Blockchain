@@ -218,7 +218,7 @@ func initAppConfig(chainID string) (string, interface{}) {
 
 	srvCfg.EVM.MaxTxGasWanted = 53948 // Lower allows more transaction throughput
 
-	srvCfg.MinGasPrices = "0.0025avince"
+	srvCfg.MinGasPrices = "0.0025avce"
 
 	srvCfg.StateSync.SnapshotInterval = 0 // Only 1500 for non-validators
 	srvCfg.StateSync.SnapshotKeepRecent = 2

@@ -70,9 +70,9 @@ init_func() {
     "$PWD"/build/vinced keys add $KEY"$i" --keyring-backend test --home "$DATA_DIR$i" --no-backup --algo "eth_secp256k1"
     "$PWD"/build/vinced init $MONIKER --chain-id $CHAINID --home "$DATA_DIR$i"
     "$PWD"/build/vinced add-genesis-account \
-    "$("$PWD"/build/vinced keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000avince \
+    "$("$PWD"/build/vinced keys show "$KEY$i" --keyring-backend test -a --home "$DATA_DIR$i")" 1000000000000000000avce \
     --keyring-backend test --home "$DATA_DIR$i"
-    "$PWD"/build/vinced gentx "$KEY$i" 1000000000000000000avince --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
+    "$PWD"/build/vinced gentx "$KEY$i" 1000000000000000000avce --chain-id $CHAINID --keyring-backend test --home "$DATA_DIR$i"
     "$PWD"/build/vinced collect-gentxs --home "$DATA_DIR$i"
     "$PWD"/build/vinced validate-genesis --home "$DATA_DIR$i"
 

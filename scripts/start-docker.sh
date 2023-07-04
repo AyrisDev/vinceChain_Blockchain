@@ -10,10 +10,10 @@ echo "create and add new keys"
 vince./vinced init $MONIKER --chain-id $CHAINID --home $DATA_DIR
 echo "prepare genesis: Allocate genesis accounts"
 ./vinced add-genesis-account \
-"$(./vinced keys show $KEY -a --home $DATA_DIR --keyring-backend test)" 1000000000000000000avince \
+"$(./vinced keys show $KEY -a --home $DATA_DIR --keyring-backend test)" 1000000000000000000avce \
 --home $DATA_DIR --keyring-backend test
 echo "prepare genesis: Sign genesis transaction"
-./vinced gentx $KEY 1000000000000000000avince --keyring-backend test --home $DATA_DIR --keyring-backend test --chain-id $CHAINID
+./vinced gentx $KEY 1000000000000000000avce --keyring-backend test --home $DATA_DIR --keyring-backend test --chain-id $CHAINID
 echo "prepare genesis: Collect genesis tx"
 ./vinced collect-gentxs --home $DATA_DIR
 echo "prepare genesis: Run validate-genesis to ensure everything worked and that the genesis file is setup correctly"

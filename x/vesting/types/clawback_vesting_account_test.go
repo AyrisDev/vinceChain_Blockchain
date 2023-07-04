@@ -16,7 +16,7 @@ import (
 )
 
 var (
-	stakeDenom    = "avince"
+	stakeDenom    = "avce"
 	feeDenom      = "fee"
 	lockupPeriods = sdkvesting.Periods{
 		sdkvesting.Period{Length: int64(16 * 60 * 60), Amount: sdk.NewCoins(sdk.NewInt64Coin(feeDenom, 1000), sdk.NewInt64Coin(stakeDenom, 100))},

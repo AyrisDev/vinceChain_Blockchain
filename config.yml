@@ -1,20 +1,19 @@
 version: 1
 accounts:
-- name: alice
-  coins: ["100000000uatom, 100000000000000000000avince"]
-- name: bob
-  coins: ["5000000000000avince"]
+  - name: alice
+    coins: ["100000000uatom, 100000000000000000000avce"]
+  - name: bob
+    coins: ["5000000000000avce"]
 
 validators:
-- name: alice
-  bonded: 100000000000000000000avince
+  - name: alice
+    bonded: 100000000000000000000avce
 
 faucet:
   name: bob
-  coins: ["10avince"]
-  
-  host: 0.0.0.0:4500
+  coins: ["10avce"]
 
+  host: 0.0.0.0:4500
 
 build:
   binary: "vinced"
@@ -26,29 +25,26 @@ init:
       ws-address: "0.0.0.0:8546"
   home: "$HOME/.vinced"
 
-
 genesis:
   chain_id: "vince_1000-1"
   app_state:
     crisis:
       constant_fee:
-        denom: "avince"
+        denom: "avce"
     evm:
       params:
-        evm_denom: "avince"
+        evm_denom: "avce"
     gov:
       deposit_params:
         min_deposit:
-        - amount: "10000000"
-          denom: "avince"
+          - amount: "10000000"
+            denom: "avce"
     mint:
       params:
-        mint_denom: "avince"
+        mint_denom: "avce"
     staking:
       params:
-        bond_denom: "avince"
-
-
+        bond_denom: "avce"
 
 host:
   rpc: ":26659"
